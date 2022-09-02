@@ -1,15 +1,16 @@
 import React, { useState } from 'react'
-import ReactDOM from 'react-dom'
+import { createRoot } from 'react-dom/client'
+
+const root = createRoot(document.getElementById('app'))
 
 const APP: React.FC = () => {
   const [count, setCount] = useState(0)
   return (
     <>
       <div>{count}</div>
-      <button onClick={() => setCount(prev => prev + 1)}>Plus</button>
+      <button onClick={() => setCount((prev) => prev + 1)}>Plus</button>
     </>
   )
 }
 
-ReactDOM.render(<APP />, document.getElementById('app'))
-
+root.render(<APP />)
