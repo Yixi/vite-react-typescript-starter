@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { createRoot } from 'react-dom/client'
+import './styles/style.less'
 
 const root = createRoot(document.getElementById('app'))
 

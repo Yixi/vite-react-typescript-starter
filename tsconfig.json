@@ -6,12 +6,6 @@
       "@root/*": [
         "src/*"
       ],
-      "@PTF/*": [
-        "src/PTF/*"
-      ],
-      "@LSP/*": [
-        "src/LSP/*"
-      ]
     },
     "outDir": "./dist/",
     "sourceMap": true,
