@@ -3,13 +3,8 @@ import { defineConfig } from 'vite'
 import reactRefresh from '@vitejs/plugin-react-refresh'
 
 export default defineConfig({
-  build: {
-    terserOptions: {
-      compress: {
-        drop_console: true,
-        drop_debugger: true
-      }
-    }
+  esbuild: {
+    drop: ['console', 'debugger']
   },
   plugins: [
     reactRefresh()
