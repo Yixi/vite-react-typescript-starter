@@ -23,3 +23,5 @@ jobs:
         with:
           name: dist
           path: dist
+      - name: Build docker Image
+        run: docker build -t vite-react-typescript-starter:${{ github.sha }} .
