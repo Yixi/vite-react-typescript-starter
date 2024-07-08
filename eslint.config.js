@@ -1,10 +1,9 @@
 // @ts-check
 
-const eslint  = require('@eslint/js')
+const eslint = require('@eslint/js')
 const tseslint = require('typescript-eslint')
 const eslintPluginPrettierRecommended = require('eslint-plugin-prettier/recommended')
-const reactRecommended = require('eslint-plugin-react/configs/recommended');
-
+const reactRecommended = require('eslint-plugin-react/configs/recommended')
 
 module.exports = tseslint.config(
   eslint.configs.recommended,
@@ -26,7 +25,7 @@ module.exports = tseslint.config(
     settings: {
       react: {
         version: 'detect',
-      }
-    }
-  }
+      },
+    },
+  },
 )
