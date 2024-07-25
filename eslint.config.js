@@ -1,15 +1,15 @@
 // @ts-check
 
-const eslint = require('@eslint/js')
-const tseslint = require('typescript-eslint')
-const eslintPluginPrettierRecommended = require('eslint-plugin-prettier/recommended')
-const reactRecommended = require('eslint-plugin-react/configs/recommended')
+import eslint from '@eslint/js'
+import tsEslint from 'typescript-eslint'
+import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended'
+import reactPlugin from 'eslint-plugin-react'
 
-module.exports = tseslint.config(
+export default tsEslint.config(
   eslint.configs.recommended,
-  ...tseslint.configs.recommended,
+  ...tsEslint.configs.recommended,
   eslintPluginPrettierRecommended,
-  reactRecommended,
+  reactPlugin.configs.flat.recommended,
   {
     rules: {
       'prettier/prettier': 'error',
