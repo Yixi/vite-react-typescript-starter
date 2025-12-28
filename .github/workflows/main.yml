@@ -9,15 +9,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Use Node.js 22.x
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 9
+      - name: Use Node.js 25.x
         uses: actions/setup-node@v4
         with:
-          node-version: 22
-          cache: 'yarn'
+          node-version: 25
+          cache: 'pnpm'
       - name: Install dependencies
-        run: yarn
+        run: pnpm install
       - name: Build
-        run: yarn build
+        run: pnpm build
       - name: Archive artifacts
         uses: actions/upload-artifact@v4
         with:

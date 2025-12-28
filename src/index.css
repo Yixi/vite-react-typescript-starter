@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+@variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  html, body {
+    @apply transition-colors duration-300;
+  }
+
+  html.dark {
+    background-color: #111827; /* gray-900 */
+    color: white;
+  }
+}
+

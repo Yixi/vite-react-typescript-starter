@@ -7,7 +7,7 @@ describe('Test Demo component', () => {
   test('should render correctly', () => {
     const wrapper = render(<Demo />)
 
-    expect(wrapper.getByText('demo')).toBeVisible()
+    expect(wrapper.getByText(/Ready to build something amazing/i)).toBeVisible()
     expect(wrapper).toMatchSnapshot()
   })
 })

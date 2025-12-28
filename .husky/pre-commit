@@ -1,2 +1,2 @@
-yarn lint-staged
-yarn typecheck
+npm run lint-staged
+npm run typecheck
